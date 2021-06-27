@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARPositionDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jsO-iu-OFT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rji-bc-F7R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCx-Cn-ckQ">
+                                <rect key="frame" x="138" y="407" width="61" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMQ-f0-5AH">
+                                <rect key="frame" x="211" y="579" width="164" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Ez6-mj-i4z"/>
+                                    <constraint firstAttribute="height" constant="20" id="Q93-iI-Rcb"/>
+                                </constraints>
+                                <state key="normal" title="Unit"/>
+                                <connections>
+                                    <action selector="UnitClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4fP-St-aH7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wcE-e0-cqQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rji-bc-F7R" firstAttribute="leading" secondItem="wcE-e0-cqQ" secondAttribute="leading" id="8HD-4A-rcy"/>
+                            <constraint firstItem="wMQ-f0-5AH" firstAttribute="trailing" secondItem="wcE-e0-cqQ" secondAttribute="trailing" id="JAg-4a-l0X"/>
+                            <constraint firstItem="rji-bc-F7R" firstAttribute="trailing" secondItem="wcE-e0-cqQ" secondAttribute="trailing" id="JSq-V8-8Rf"/>
+                            <constraint firstItem="wMQ-f0-5AH" firstAttribute="bottom" secondItem="wcE-e0-cqQ" secondAttribute="bottom" id="h5o-7b-p5A"/>
+                            <constraint firstItem="rji-bc-F7R" firstAttribute="top" secondItem="jsO-iu-OFT" secondAttribute="top" id="kuL-ya-SNs"/>
+                            <constraint firstItem="rji-bc-F7R" firstAttribute="bottom" secondItem="wcE-e0-cqQ" secondAttribute="bottom" id="sv8-IM-FxL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneV" destination="rji-bc-F7R" id="5hh-RV-Cze"/>
+                        <outlet property="targetIM" destination="iCx-Cn-ckQ" id="8sX-AT-UOE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="192"/>
+        </scene>
+    </scenes>
+</document>
